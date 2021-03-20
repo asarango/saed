@@ -14,7 +14,13 @@ class User_model extends CI_Model{
      */
     public function login($dataPost){
         
-        $sql = 'SELECT seguridad."ValidarUsuarioClave"('."'USERGEN','e10adc3949ba59abbe56e057f20f883e','permisos','empresas','estado');";
+        $username = $dataPost['username'];
+        $pass = $dataPost['password'];
+        
+        $password = md5($pass);
+        
+        
+        $sql = 'SELECT seguridad."ValidarUsuarioClave"('."'$username','$password','permisos','empresas','estado');";
         
         /**** para tomar cursores de consulta de login*////
         pg_query("BEGIN;");
