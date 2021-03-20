@@ -96,10 +96,10 @@ $query_builder = TRUE;
 //);
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '192.168.100.150',
-	'username' => 'base',
-	'password' => 'asarango5000',
-	'database' => 'suit',
+	'hostname' => '200.105.253.75',
+	'username' => 'saed',
+	'password' => 'saed2021',
+	'database' => 'saed',
 	'dbdriver' => 'postgre',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -114,5 +114,5 @@ $db['default'] = array(
 	'stricton' => FALSE,
 	'failover' => array(),
 	'save_queries' => TRUE,
-	'port' => 5433
+	'port' => 5432
 );
