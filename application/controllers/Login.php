@@ -39,10 +39,21 @@ class Login extends REST_Controller {
                 'message' => 'Usuario y/o clave incorrecto!!!',
                 'data' => null
             );
-        } else {
+        } else if($login == true){
+            
+            //$permisos = $login['estado'];
+            
             $respuesta = array(
                 'error' => false,
                 'message' => 'Conexión correcta',
+                'estado' => $login['estado'],
+                'permisos' => $login['permisos'],
+                'empresas' => $login['empresas']
+            );
+        }elseif($login == 'index'){
+            $respuesta = array(
+                'error' => true,
+                'message' => 'Index username y/o password no existen!!',
                 'data' => $login
             );
         }

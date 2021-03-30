@@ -14,7 +14,7 @@ class User_model extends CI_Model {
      */
 
     public function login($dataPost) {
-
+        
         $username = $dataPost['username'];
         $pass = $dataPost['password'];
 
