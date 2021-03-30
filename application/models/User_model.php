@@ -30,8 +30,9 @@ class User_model extends CI_Model {
 
         $respEstado = pg_query("FETCH ALL estado;");
         $estado = pg_fetch_all($respEstado);
+        
 
-        if ($estado[0]['coderror'] == 'ERROR') {
+        if ($estado[0]['coderror'] == 'ERROR' || $estado[0]['coderror'] == 'Error') {
           $respuesta = false;  
         } else {
             $respPermisos = pg_query("FETCH ALL permisos;");
